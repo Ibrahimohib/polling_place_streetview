@@ -41,9 +41,12 @@
 				}
 			];
 
+      navigator.geolocation.getCurrentPosition(function(position) {
+        getNearestPollingLocation(position.coords.latitude, position.coords.longitude);
+    });
+
 			function getNearestPollingLocation() {
-				// TODO: get current browser location
-				// TODO: find closest location from polling_locations 
+
 				return polling_locations[0];
 			}
 
@@ -55,6 +58,11 @@
 			$('#find-polling-loc').click(function(e) {
 				// prevent the link from being followed
 			  e.preventDefault();
+
+        navigator.geolocation.getCurrentPosition(function(position) {
+          console.log(position.coords.latitude + position.coords.longitude);
+      });
+
 
 				console.log('button clicked!!1');
 				var poll = getNearestPollingLocation();
