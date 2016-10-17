@@ -20,9 +20,37 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
 
+	  <script>
+		$( document ).ready(function() {
+			polling_locations = [
+				{
+					name: "location name",
+					latlon: "29.9520292,-90.079312",
+					heading: 235
+				},
+				{
+					name: "other location name",
+					latlon: "30.0150905,-89.984978",
+					heading: 330
+				}
+			];
+
+			function getNearestPollingLocation() {
+				// TODO: get current browser location
+				// TODO: find closest location from polling_locations 
+				return polling_locations[0];
+			}
+
+			// TODO: respond to big button click
+			//       get nearest polling place
+			//       display it on the webapp
+    });
+		</script>
   </head>
 
   <body>
