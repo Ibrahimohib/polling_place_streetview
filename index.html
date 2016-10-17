@@ -29,6 +29,11 @@
 		$( document ).ready(function() {
 			polling_locations = [
 				{
+				  name: "ENGINE HOUSE #35",
+					latlon: "29.981453,-90.0948807",
+					heading: 100
+				},
+				{
 					name: "location name",
 					latlon: "29.9520292,-90.079312",
 					heading: 235
@@ -67,9 +72,7 @@
 
 				// add an image
 				$('#pol-loc-img').attr('src', pollSvUrl);
-				$('#pol-loc-name').attr('src', poll.name);
-				// display description
-
+				$('#pol-loc-name').text(poll.name);
 			});
     });
 		</script>
